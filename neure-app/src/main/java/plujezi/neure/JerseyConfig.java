@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 import javax.inject.Singleton;
 import javax.ws.rs.ApplicationPath;
 
-@ApplicationPath("/neure/api")
+@ApplicationPath("neure/api")
 @Configuration
 public class JerseyConfig extends ResourceConfig {
 
