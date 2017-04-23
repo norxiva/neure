@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+            http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
+
+    <!-- dubbo config -->
+    <dubbo:annotation/>
+    <dubbo:registry address="127.0.0.1:2181" protocol="zookeeper"/>
+    <dubbo:application name="neure-dubbo" logger="slf4j"/>
+    <dubbo:provider threadpool="cached" accepts="2000" timeout="3000"/>
+    <dubbo:protocol name="dubbo" port="20880"/>
+
+    <!-- dubbo reference -->
+    <dubbo:reference interface="plujezi.neure.api.DubboService" id="dubboService" timeout="3000" check="false" injvm="true"/>
+    <dubbo:reference interface="plujezi.neure.server.api.TestService" id="testService" timeout="3000" check="false"/>
+
+    <!-- dubbo provider -->
+    <dubbo:service interface="plujezi.neure.api.DubboService" ref="dubboServiceImpl"/>
+
+
+</beans>
