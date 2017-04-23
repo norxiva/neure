@@ -1,0 +1,15 @@
+
+server:
+  port: 9010
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9010/eureka/
+    register-with-eureka: false
+    fetch-registry: false
+  instance:
+    hostname: localhost
+    instance-id: http://localhost:9010
+spring:
+  application:
+    name: reigister-name

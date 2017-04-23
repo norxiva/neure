@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.ws.rs.GET;
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.Date;
 
 @Getter
@@ -18,6 +16,8 @@ public class TestModel implements Serializable{
     private Integer id;
     private String name;
     private String password;
+
+    // dubbo dose not support LocalDateTime
     private Date createTime;
 
 }

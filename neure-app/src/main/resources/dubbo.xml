@@ -12,6 +12,7 @@
     <dubbo:provider threadpool="cached" accepts="2000" timeout="3000"/>
     <dubbo:protocol name="dubbo" port="20880"/>
 
+    <!-- dubbo reference and provider should be defined by xml, otherwise some property will be not effected such as 'check' and etc. -->
     <!-- dubbo reference -->
     <dubbo:reference interface="plujezi.neure.api.DubboService" id="dubboService" timeout="3000" check="false" injvm="true"/>
     <dubbo:reference interface="plujezi.neure.server.api.TestService" id="testService" timeout="3000" check="false"/>

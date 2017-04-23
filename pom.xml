@@ -7,6 +7,7 @@
         <module>neure-app</module>
         <module>neure-server-api</module>
         <module>neure-server</module>
+        <module>neure-register</module>
     </modules>
 
     <parent>
@@ -35,6 +36,7 @@
         <mybatis-typehandlers.version>1.0.2</mybatis-typehandlers.version>
         <mysql-connector-java.version>5.1.41</mysql-connector-java.version>
         <servlet-api.version>3.1.0</servlet-api.version>
+        <spring-cloud.version>Camden.SR6</spring-cloud.version>
         <slf4j.version>1.7.25</slf4j.version>
         <zkclient.version>0.10</zkclient.version>
     </properties>
@@ -231,6 +233,15 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>log4j-over-slf4j</artifactId>
                 <version>${slf4j.version}</version>
+            </dependency>
+
+            <!-- spring-cloud -->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
             </dependency>
 
             <!-- zkclient -->
