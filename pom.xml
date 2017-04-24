@@ -8,6 +8,7 @@
         <module>neure-server-api</module>
         <module>neure-server</module>
         <module>neure-register</module>
+        <module>neure-config</module>
     </modules>
 
     <parent>

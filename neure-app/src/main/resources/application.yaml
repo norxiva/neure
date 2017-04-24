@@ -1,5 +1,10 @@
 
 spring:
+  cloud:
+    config:
+      uri: http://localhost:9020
+  application:
+    name: neureapp
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
@@ -12,5 +17,9 @@ mybatis:
   config-location: classpath:mybatis-config.xml
 server:
   port: 9000
-
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9010/eureka/
+    fetch-registry: true
 

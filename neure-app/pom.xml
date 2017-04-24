@@ -187,6 +187,16 @@
             <!--<artifactId>spring-boot-devtools</artifactId>-->
         <!--</dependency>-->
 
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-config</artifactId>
+        </dependency>
+
         <!-- junit -->
         <dependency>
             <groupId>junit</groupId>
