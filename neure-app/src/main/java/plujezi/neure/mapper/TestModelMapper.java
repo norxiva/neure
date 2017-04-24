@@ -18,4 +18,6 @@ public interface TestModelMapper {
     List<TestModel> selectAll();
 
     int updateByPrimaryKey(TestModel record);
+
+    List<TestModel> selectWithPage(TestModel testModel);
 }

@@ -5,13 +5,13 @@
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="name" jdbcType="VARCHAR" property="name" />
     <result column="password" jdbcType="VARCHAR" property="password" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_time" jdbcType="TIMESTAMP" javaType="java.util.Date" property="createTime" />
   </resultMap>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from test_model
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="plujezi.neure.bean.TestModel">
+  <insert id="insert" parameterType="plujezi.neure.bean.TestModel" useGeneratedKeys="true" keyProperty="id">
     insert into test_model (id, name, password, 
       create_time)
     values (#{id,jdbcType=INTEGER}, #{name,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
@@ -29,7 +29,13 @@
     from test_model
     where id = #{id,jdbcType=INTEGER}
   </select>
+
   <select id="selectAll" resultMap="BaseResultMap">
+    select id, name, password, create_time
+    from test_model
+  </select>
+
+  <select id="selectWithPage" parameterType="plujezi.neure.bean.TestModel" resultMap="BaseResultMap">
     select id, name, password, create_time
     from test_model
   </select>

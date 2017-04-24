@@ -35,6 +35,7 @@
         <mybatis-boot.version>1.2.1</mybatis-boot.version>
         <mybatis-typehandlers.version>1.0.2</mybatis-typehandlers.version>
         <mysql-connector-java.version>5.1.41</mysql-connector-java.version>
+        <pagehelper.version>5.0.1</pagehelper.version>
         <servlet-api.version>3.1.0</servlet-api.version>
         <spring-cloud.version>Camden.SR6</spring-cloud.version>
         <slf4j.version>1.7.25</slf4j.version>
@@ -205,6 +206,14 @@
                 <artifactId>mysql-connector-java</artifactId>
                 <version>${mysql-connector-java.version}</version>
             </dependency>
+
+            <!-- pagehelper -->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+
 
             <!-- servlet-api -->
             <dependency>
