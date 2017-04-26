@@ -36,9 +36,9 @@ public class RibbonEndpoint {
     @Path("request")
     public Response request(@QueryParam("name") String name){
 
-        ServiceInstance serviceInstance =  loadBalancerClient.choose("neureapp");
-        URI uri = serviceInstance.getUri();
-        log.info("uri:{}", uri);
+//        ServiceInstance serviceInstance =  loadBalancerClient.choose("neureapp");
+//        URI uri = serviceInstance.getUri();
+//        log.info("uri:{}", uri);
 
         @SuppressWarnings("unchecked")
         Map<String, Object> map = restTemplate.getForEntity("http://NEUREAPP/neure/api/dubbo/13", HashMap.class).getBody();

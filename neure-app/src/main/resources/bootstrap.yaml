@@ -1,4 +1,6 @@
 spring:
+  application:
+    name: neureapp
   cloud:
     config:
       uri: ${CONFIG.URI}
