@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Map;
 
 @Slf4j
-@Path("test")
+@Path("dubbo")
 @Component
 public class DubboEndpoint {
 

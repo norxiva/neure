@@ -1,8 +1,4 @@
-
 spring:
-  cloud:
-    config:
-      uri: http://localhost:9020
   application:
     name: neureapp
   datasource:
@@ -15,8 +11,6 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   config-location: classpath:mybatis-config.xml
-server:
-  port: 9000
 eureka:
   client:
     serviceUrl:

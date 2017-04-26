@@ -3,6 +3,9 @@ spring:
     name: neure-config
   cloud:
     config:
+#      discovery:
+#        enabled: true
+#        service-id: neure-configserver
       server:
         git:
           uri: https://github.com/plujezi/config-repo.git

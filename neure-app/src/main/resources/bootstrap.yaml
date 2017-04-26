@@ -1,0 +1,13 @@
+spring:
+  cloud:
+    config:
+      uri: ${CONFIG.URI}
+      profile: ${CONFIG.PROFILE}
+      label: ${CONFIG.LABEL}
+server:
+  port: ${SERVER.PORT}
+dubbo:
+  port: ${DUBBO.PORT}
+
+
+
