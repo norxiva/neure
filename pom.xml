@@ -10,6 +10,7 @@
         <module>neure-register</module>
         <module>neure-config</module>
         <module>neure-groovy</module>
+        <module>neure-axon</module>
     </modules>
 
     <parent>
@@ -24,6 +25,8 @@
     <packaging>pom</packaging>
 
     <properties>
+        <axon.version>2.4.6</axon.version>
+        <commons-beanutils.version>1.9.3</commons-beanutils.version>
         <commons-codec.version>1.10</commons-codec.version>
         <druid.version>1.0.29</druid.version>
         <dubbox.version>2.8.4</dubbox.version>
@@ -47,6 +50,36 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- axon -->
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-core</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-mongo</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-mongo3</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.axonframework</groupId>
+                <artifactId>axon-test</artifactId>
+                <version>${axon.version}</version>
+            </dependency>
+
+            <!-- commons-beanutils -->
+            <dependency>
+                <groupId>commons-beanutils</groupId>
+                <artifactId>commons-beanutils</artifactId>
+                <version>${commons-beanutils.version}</version>
+            </dependency>
+
             <!-- commons-codec -->
             <dependency>
                 <groupId>commons-codec</groupId>

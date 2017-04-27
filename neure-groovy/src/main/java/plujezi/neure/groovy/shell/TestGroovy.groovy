@@ -22,4 +22,11 @@ class TestGroovy {
         response.setCode("0000")
         return response
     }
+
+    static Map test4(Map<String, Object> request){
+        println(request)
+        Map<String, Object> resp = new HashMap()
+        resp.put("code", "0000")
+        return resp
+    }
 }

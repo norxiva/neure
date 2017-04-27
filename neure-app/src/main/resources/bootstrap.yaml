@@ -6,10 +6,19 @@ spring:
       uri: ${CONFIG.URI}
       profile: ${CONFIG.PROFILE}
       label: ${CONFIG.LABEL}
+  redis:
+    host: 172.29.152.10
+    port: 7000
+  data:
+    mongodb:
+      database: neure
+      uri: mongodb://localhost/neure
+      port: 27017
 server:
   port: ${SERVER.PORT}
 dubbo:
   port: ${DUBBO.PORT}
+
 
 
 

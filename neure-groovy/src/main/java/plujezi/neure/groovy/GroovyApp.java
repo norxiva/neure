@@ -1,12 +1,14 @@
 package plujezi.neure.groovy;
 
 
+import com.fasterxml.jackson.databind.util.BeanUtil;
 import com.google.common.collect.Maps;
 import groovy.lang.GroovyClassLoader;
 import groovy.lang.GroovyObject;
 import groovy.lang.GroovyShell;
 import groovy.lang.Script;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.commons.beanutils.BeanUtils;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -20,6 +22,7 @@ import plujezi.neure.groovy.shell.RespBean;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
 @Slf4j
@@ -98,6 +101,24 @@ public class GroovyApp {
             e.printStackTrace();
         }
     }
+
+//    private void testGroovy6(){
+//        GroovyClassLoader groovyClassLoader = new GroovyClassLoader();
+//        try {
+//            Class clz = groovyClassLoader.parseClass(new File("C:\\Users\\jiashengxue\\IdeaProjects\\neure\\neure-groovy\\src\\main\\java\\plujezi\\neure\\groovy\\shell\\TestGroovy.groovy"));
+//            GroovyObject groovyObject = (GroovyObject)clz.newInstance();
+//            Request request = new Request();
+//            request.setEmail("plujezi@qq.com");
+//            request.setStatus("0");
+//            Map<String, Object> map = Maps.newHashMap();
+//            BeanUtils.copyProperties(map, request);
+////            BeanUtils.copyProperties(request, map);
+//            Response response = (Response)groovyObject.invokeMethod("test4", map);
+//            log.info("resp: {}", response.toString());
+//        } catch (IOException | InstantiationException | IllegalAccessException | InvocationTargetException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
     public static void main(String[] args) {
         SpringApplication.run(GroovyApp.class, args);
