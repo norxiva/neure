@@ -9,6 +9,7 @@
         <module>neure-server</module>
         <module>neure-register</module>
         <module>neure-config</module>
+        <module>neure-groovy</module>
     </modules>
 
     <parent>
@@ -26,6 +27,7 @@
         <commons-codec.version>1.10</commons-codec.version>
         <druid.version>1.0.29</druid.version>
         <dubbox.version>2.8.4</dubbox.version>
+        <groovy.version>2.4.10</groovy.version>
         <guava.version>21.0</guava.version>
         <jackson.version>2.8.8</jackson.version>
         <jersey.version>2.25.1</jersey.version>
@@ -71,6 +73,14 @@
                     </exclusion>
                 </exclusions>
             </dependency>
+
+            <!-- groovy -->
+            <dependency>
+                <groupId>org.codehaus.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>${groovy.version}</version>
+            </dependency>
+
 
             <!-- guava -->
             <dependency>
