@@ -12,6 +12,10 @@
     <artifactId>neure-app</artifactId>
 
 
+    <properties>
+        <start-class>plujezi.neure.App</start-class>
+    </properties>
+
     <dependencies>
 
         <dependency>
