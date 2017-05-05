@@ -11,6 +11,7 @@
         <module>neure-config</module>
         <module>neure-groovy</module>
         <module>neure-axon</module>
+        <module>neure-spark</module>
     </modules>
 
     <parent>
